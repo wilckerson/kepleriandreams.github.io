@@ -3,33 +3,68 @@ html {
     color: #000;
     font-family: "Consolas", monospace;
     font-size:11px;
-    min-width: 1240px;
+    /* min-width: 1240px; */
   }
+
+html, body{
+    margin:0;
+    height: 100%;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#guitar-parent{
+    flex-grow: 1;
+}
+
+.auto-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 1rem;
+}
+
+.options-group{
+    display:inline-block;
+    vertical-align: top;
+    border:1px dotted #555;
+    padding:6px;
+}
+
+.options-group > div{
+    margin-bottom:6px;
+}
 
 .toptions{
     background: #444;
     color: #ccc;
     border: 1px solid #333;
-    /*padding: 5px;*/
+    /*padding: 6px;*/
 }
 
 .boptions{
     background: #2d221f;
     color: #ccc;
     border: 1px solid #333;
-    padding: 5px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    padding: 6px;
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+    /* display:flex;
+    gap:6px; */
 }
 
 
 #full-guitar{
-    min-height: 335px;
+    height: 100%;
+    min-height: 336px;
     position: relative;
     border:1px solid #000;
     background-color: #555;
     background-image: linear-gradient(to bottom,rgb(118, 138, 147),rgb(44 43 67));
-    overflow: scroll;
+    overflow-x: scroll;
     /*padding-left:100px;*/
 }
 
@@ -168,10 +203,10 @@ background-color: #333;
 }
 
 
-input[type="range"]::-moz-range-thumb { width:5px;height: 10px; background-color: rgb(15, 116, 40); border-radius: 0px; border-color:#bebebe;}
+input[type="range"]::-moz-range-thumb { width:6px;height: 10px; background-color: rgb(15, 116, 40); border-radius: 0px; border-color:#bebebe;}
 input[type="range"]::-moz-range-thumb:hover { background-color: rgba(4, 255, 0, 0.9);}
 
-input[type="range"] {border:1px solid rgb(118, 167, 130); background-color: #161575; height: 5px;width:100px; vertical-align: middle; margin:4px;}
+input[type="range"] {border:1px solid rgb(118, 167, 130); background-color: #161575; height: 6px;width:100px; vertical-align: middle; margin:4px;}
 
 input[type="text"]{
    background-color: #000; color:#999;
