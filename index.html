@@ -1,115 +1,167 @@
 <!DOCTYPE html>
 <head>
-    <style>
-        html{
-            background-color: #000;
-            color:#eee;
-            margin:0;
-            padding:0;
-            font-family: Arial, Helvetica, sans-serif;
-            min-width: 1150px;
-        }
-        .full{
-            border:3px solid #111;
-        }
-        .main{
-            padding: 5px;
-        }
-        .app-section{
-            padding: 20px;
-            border-bottom: 1px solid#444;
-        }
-        .app-img{
-            display: inline-block;
-            border:1px dashed #666;
-            text-align: center;
-            vertical-align: middle;
-            width: 225px;
-            height: 150px;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-        .app-text{
-            display: inline-block;
-            height: auto;
-            vertical-align: top;
-            width: 800px;
-            margin-left:12px;
-        }
-        .app-title{
-            font-size:18px;
-            font-weight: bold;
-            color:#ccc;
-        }
-        .app-desc{
-            color:#ccc;
-            font-size: 18px;
-            margin:25px 0px;
-        }
-        .links{
-            padding: 20px;
-            font-size: 15px;
-        }
-        .app-extra{
-            font-size: 15px;
-            word-spacing: 10px;
-        }
-    </style>
+  <style>
+    html {
+      background-color: #000;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      min-width: 1150px;
+    }
+    .full {
+      border: 3px solid #111;
+    }
+    .main {
+      padding: 5px;
+    }
+    .app-section {
+      padding: 20px;
+      border-bottom: 1px solid#444;
+    }
+    .app-img {
+      display: inline-block;
+      border: 1px dashed #666;
+      text-align: center;
+      vertical-align: middle;
+      width: 225px;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .app-text {
+      display: inline-block;
+      height: auto;
+      vertical-align: top;
+      width: 800px;
+      margin-left: 12px;
+    }
+    .app-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ccc;
+    }
+    .app-desc {
+      color: #ccc;
+      font-size: 18px;
+      margin: 25px 0px;
+    }
+    .links {
+      padding: 20px;
+      font-size: 15px;
+    }
+    .app-extra {
+      font-size: 15px;
+      word-spacing: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="full">
-        <div="main">
-            <div class="app-section"> 
-                <a href="https://github.com/kepleriandreams">kepleriandreams</a> - Free Web-Based desktop music apps and tools.
-            </div>
-            <div class="app-section">
-                <div class="app-img" style="background-image: url(mind-demo.jpg);"></div>
-                <div class="app-text">
-                    <a><div class="app-title">MIND (Musical Interfaces/Devices)</div></a>
-                    <div class="app-desc">Web Audio API with UI hosts experimental musical interfaces, generative music, virtual instruments, sonification, etc.
-                    This app is a prototype on development (it is very buggy).</div>
-                    <div class="app-extra"><a href="mind/mind.html">APP</a></div>
-                </div>
-            </div>
-
-            <div class="app-section">
-                <div class="app-img" style="background-image: url(iruler-demo.jpg);"></div>
-                <div class="app-text">
-                    <div class="app-title">Interval Ruler</div>
-                    <div class="app-desc">Interval matrix for musical tuning systems with rulers and simple synth. </div>
-                    <div class="app-extra"><a href="app/rulers.html">APP</a></div>
-                </div>
-            </div>
-
-            <div class="app-section">
-                <div class="app-img" style="background-image: url(3dfractal-demo.jpg);"></div>
-                <div class="app-text">
-                    <div class="app-title">3D Fractal</div>
-                    <div class="app-desc">Virtual instrument interface: 3D Fractals, plays pitch from a 3d object data. 3d immersive sound. ("stand-alone" old version). </div>
-                    <div class="app-extra"><a href="app/3d-fractal.html">APP</a> <a href="https://www.behance.net/gallery/160888763/3D-Fractal-Microtonal-Synth-Web-App" target="_blank">Help</a></div>
-                </div>
-            </div>
-
-            <div class="app-section">
-                <div class="app-img" style="background-image: url(spiral-tuner-demo.jpg);"></div>
-                <div class="app-text">
-                    <div class="app-title">Spiral Harp</div>
-                    <div class="app-desc">Virtual instrument interface: Microtonal Spiral Harp, emulates stringed spiral harps in many configurations (spiderweb-fashioned), auto chords finder, exports scala tuning files. ("stand-alone" old version). </div>
-                    <div class="app-extra"><a href="app/spiral-harp.html">APP</a> <a href="https://www.behance.net/gallery/160887083/Spiderweb-Harp-Spiral-Tuner-Microtonal-Synth" target="_blank">Help</a></div>
-                </div>
-            </div>
-
-            <div class="app-section">
-                <div class="app-img" style="background-image: url(microtonal-guitar-demo.jpg);"></div>
-                <div class="app-text">  
-                    <div class="app-title">SFINX (Xen Guitars)</div>
-                    <div class="app-desc">Custom Microtonal Guitars for scale/fretboard learning, ("stand-alone" version). </div>
-                    <div class="app-extra"><a href="app/microtonal-guitar.html">APP</a></div>
-                    <div class="app-extra"><a href="app/microtonal-guitar-old.html">APP(Old)</a></div>
-                </div>
-            </div>
- 
+  <div class="full">
+    <div ="main">
+      <div class="app-section">
+        <a href="https://github.com/kepleriandreams">kepleriandreams</a> - Free
+        Web-Based desktop music apps and tools.
+      </div>
+      <div class="app-section">
+        <div class="app-img" style="background-image: url(mind-demo.jpg)"></div>
+        <div class="app-text">
+          <a><div class="app-title">MIND (Musical Interfaces/Devices)</div></a>
+          <div class="app-desc">
+            Web Audio API with UI hosts experimental musical interfaces,
+            generative music, virtual instruments, sonification, etc. This app
+            is a prototype on development (it is very buggy).
+          </div>
+          <div class="app-extra"><a href="mind/mind.html">APP</a></div>
         </div>
-        <div class="links">YouTube Channel: <a href="https://www.youtube.com/@j.b.cristian" target="_blank">@JBCristian</a></div>
+      </div>
+
+      <div class="app-section">
+        <div
+          class="app-img"
+          style="background-image: url(iruler-demo.jpg)"
+        ></div>
+        <div class="app-text">
+          <div class="app-title">Interval Ruler</div>
+          <div class="app-desc">
+            Interval matrix for musical tuning systems with rulers and simple
+            synth.
+          </div>
+          <div class="app-extra"><a href="app/rulers.html">APP</a></div>
+        </div>
+      </div>
+
+      <div class="app-section">
+        <div
+          class="app-img"
+          style="background-image: url(3dfractal-demo.jpg)"
+        ></div>
+        <div class="app-text">
+          <div class="app-title">3D Fractal</div>
+          <div class="app-desc">
+            Virtual instrument interface: 3D Fractals, plays pitch from a 3d
+            object data. 3d immersive sound. ("stand-alone" old version).
+          </div>
+          <div class="app-extra">
+            <a href="app/3d-fractal.html">APP</a>
+            <a
+              href="https://www.behance.net/gallery/160888763/3D-Fractal-Microtonal-Synth-Web-App"
+              target="_blank"
+              >Help</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="app-section">
+        <div
+          class="app-img"
+          style="background-image: url(spiral-tuner-demo.jpg)"
+        ></div>
+        <div class="app-text">
+          <div class="app-title">Spiral Harp</div>
+          <div class="app-desc">
+            Virtual instrument interface: Microtonal Spiral Harp, emulates
+            stringed spiral harps in many configurations (spiderweb-fashioned),
+            auto chords finder, exports scala tuning files. ("stand-alone" old
+            version).
+          </div>
+          <div class="app-extra">
+            <a href="app/spiral-harp.html">APP</a>
+            <a
+              href="https://www.behance.net/gallery/160887083/Spiderweb-Harp-Spiral-Tuner-Microtonal-Synth"
+              target="_blank"
+              >Help</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="app-section">
+        <div
+          class="app-img"
+          style="background-image: url(microtonal-guitar-demo.jpg)"
+        ></div>
+        <div class="app-text">
+          <div class="app-title">SFINX (Xen Guitars)</div>
+          <div class="app-desc">
+            Custom Microtonal Guitars for scale/fretboard learning,
+            ("stand-alone" version).
+          </div>
+          <div class="app-extra">
+            <a href="app/microtonal-guitar/index.html">APP</a>
+          </div>
+          <div class="app-extra">
+            <a href="app/microtonal-guitar/index-old.html">APP(Old)</a>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="links">
+      YouTube Channel:
+      <a href="https://www.youtube.com/@j.b.cristian" target="_blank"
+        >@JBCristian</a
+      >
+    </div>
+  </div>
 </body>
