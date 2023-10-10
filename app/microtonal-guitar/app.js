@@ -326,6 +326,14 @@ function createChordRowControls() {
   };
 }
 
+function calculateFitToScreen() {
+  const appWidth = document.getElementById("app").clientWidth;
+  const initialWidth = Math.max(1000, appWidth * 0.85);
+  document.getElementById("nLength").value = initialWidth;
+  document.getElementById("nWidth").value = initialWidth * 0.15;
+}
+calculateFitToScreen();
+
 let measures = [];
 let strings = [];
 let tuningPatterns = [];
@@ -370,9 +378,10 @@ function prepareGuitar() {
 
   let controlsFrame = document.createElement("DIV");
   controlsFrame.style.position = "absolute";
-  //controlsFrame.style.backgroundColor = "rgba(0,0,0,0.2)";
+  //   controlsFrame.style.backgroundColor = "rgba(0,0,0,0.2)";
   controlsFrame.style.width = "100px";
   controlsFrame.style.height = "100%";
+  controlsFrame.id = "controls-frame";
   //controlsFrame.style.top = gtp+"px";
 
   const tuningPatternSuggestion = (function () {
