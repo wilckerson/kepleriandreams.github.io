@@ -328,9 +328,9 @@ function createChordRowControls() {
 
 function calculateFitToScreen() {
   const appWidth = document.getElementById("app").clientWidth;
-  const initialWidth = Math.max(1000, appWidth * 0.85);
+  const initialWidth = Math.max(1000, Math.floor(appWidth * 0.85));
   document.getElementById("nLength").value = initialWidth;
-  document.getElementById("nWidth").value = initialWidth * 0.15;
+  document.getElementById("nWidth").value = Math.floor(initialWidth * 0.15);
 }
 calculateFitToScreen();
 
@@ -833,6 +833,72 @@ function createGuitarII(hl) {
   createChordRowControls();
   createColorOpts();
   highlightNotes();
+  createNoteNames();
+}
+
+function createNoteNames() {
+  const normalizeNotes = document.getElementById("normalizeNotes").checked;
+  const showNotes = document.getElementById("showNotes").checked;
+  if (!showNotes) {
+    return;
+  }
+  const noteType = document.getElementById("note-type").selectedIndex;
+  const period = getPeriod();
+  for (let i = 0; i < strings.length; i++) {
+    for (let f = 0; f < nFrets + 1; f++) {
+      const stringFret = strings[i][f];
+      let currentNote = notesPool[stringFret[5] - 1];
+      if (normalizeNotes) {
+        currentNote = normalize(currentNote, period);
+      }
+
+      let noteName = document.createElement("div");
+      noteName.className = "note-name";
+      noteName.innerText = getNoteName(currentNote || 0, noteType);
+      stringFret[0].appendChild(noteName);
+    }
+  }
+}
+
+function getNoteName(ratio, noteType) {
+  if (noteType == 0) {
+    // Decimal
+    return ratio.toFixed(3);
+  } else if (noteType == 1) {
+    //Cents
+    const cents = Math.log2(ratio) * 1200;
+    return cents.toFixed(0) + "c";
+  }
+  return "";
+}
+
+function getPeriod() {
+  let selected = GetTrueOne("tuningType");
+  if (selected == 1) {
+    let ints = readIntervalsList();
+    const period = ints[ints.length - 1]; //last
+    return period;
+  } else {
+    const period = parseFloat(document.getElementById("nInterval").value);
+    return period;
+  }
+}
+
+function normalize(value, period) {
+  if (period == 1) {
+    return value;
+  }
+
+  if (value >= period) {
+    while (value >= period) {
+      value = value / period;
+    }
+  } else if (value > 0 && value < 1) {
+    while (value < 1) {
+      value = value * period;
+    }
+  }
+  return value;
 }
 
 function rerrangeIntervals(intervals, newindex, tuningPattern) {

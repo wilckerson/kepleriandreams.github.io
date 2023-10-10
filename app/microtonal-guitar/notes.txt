@@ -1,0 +1,10 @@
+Bugs:
+- No support for negative numbers on string intervals
+
+Features:
+- Support for skip-freting
+- Set root note to fret X
+
+Sample Interval List:
+1, 1.25, 1.5, 1.75, 2
+

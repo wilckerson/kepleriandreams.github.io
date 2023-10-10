@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Microtonal Guitar</title>
+    <meta charset="utf-8" />
   </head>
 
   <body>
@@ -263,6 +264,28 @@
             />
           </div>
           <!--button onclick="randomSynth();">Random Synth</button-->
+        </div>
+
+        <div id="notes-opts" class="options-group">
+          <div>
+            Show notes:
+            <input type="checkbox" id="showNotes" onchange="prepareGuitar();" />
+          </div>
+          <div>
+            Show as:
+            <select id="note-type" onchange="prepareGuitar();">
+              <option selected>Decimal</option>
+              <option>Cents</option>
+            </select>
+          </div>
+          <div>
+            Normalize to period:
+            <input
+              type="checkbox"
+              id="normalizeNotes"
+              onchange="prepareGuitar();"
+            />
+          </div>
         </div>
       </div>
     </div>
